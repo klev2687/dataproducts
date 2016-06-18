@@ -1,0 +1,69 @@
+---
+title       : Developing Data Products
+subtitle    : Predicting Sons Height Using Fathers Height
+author      : Klevin D.
+job         : 
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}slidi
+knit        : slidify::knit2slides
+github:
+  user: klev2687
+  repo: dataproducts
+---
+
+## Objective
+
+This presentation details the shiny application developed for assignment 'Developing Data Products' course of Coursera Data Science course.
+
+The function of this application is to predict the height of the son based on the entered fathers height.
+
+Linear regression model is used as the prediction algorithm.
+
+--- .class #id 
+
+## Requirements
+
+### Data Source
+* father.son dataset from library 'UsingR'
+
+### R packages:
+* shiny
+* UsingR
+
+---
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library(UsingR)
+library(shiny)
+data("father.son")
+```
+
+## Cleaning Data Set
+
+Preliminary look at the father.son dataset reveals that there are duplicates in sheight variable.
+```{r, echo=TRUE}
+which(table(father.son$sheight)>1)
+```
+
+The above measurements are removed from the dataset so as to not bias the regression model.
+
+---
+```{r, echo=FALSE}
+#Duplicate son heights values are identified
+shdup <- as.numeric(names(which(table(father.son$sheight)>1)))
+
+#Dataset with no duplicates for son heights
+fsnodup <- father.son[!(father.son$sheight %in% shdup),]
+```
+
+## Exploratory Analysis
+
+Looking at the dataset, there is a visible correlation between the fathers and sons height.
+
+```{r, echo=FALSE, fig.align='center'}
+plot(fsnodup)
+fitlm <- lm(sheight~fheight, data = fsnodup)
+abline(lm(fitlm), col='red')
+```
