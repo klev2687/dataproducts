@@ -3,7 +3,7 @@ title       : Developing Data Products
 subtitle    : Predicting Sons Height Using Fathers Height
 author      : Klevin D.
 job         : 
-framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+framework   : landslide        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
 widgets     : []            # {mathjax, quiz, bootstrap}
@@ -59,3 +59,12 @@ The above measurements are removed from the dataset so as to not bias the regres
 Looking at the dataset, there is a visible correlation between the fathers and sons height.
 
 <img src="assets/fig/unnamed-chunk-4-1.png" title="plot of chunk unnamed-chunk-4" alt="plot of chunk unnamed-chunk-4" style="display: block; margin: auto;" />
+
+---
+## Shiny App
+
+Please link below to access app
+
+https://klevd.shinyapps.io/dataproducts/
+
+

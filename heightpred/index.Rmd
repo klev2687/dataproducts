@@ -3,7 +3,7 @@ title       : Developing Data Products
 subtitle    : Predicting Sons Height Using Fathers Height
 author      : Klevin D.
 job         : 
-framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+framework   : landslide        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
 widgets     : []            # {mathjax, quiz, bootstrap}
@@ -67,3 +67,12 @@ plot(fsnodup)
 fitlm <- lm(sheight~fheight, data = fsnodup)
 abline(lm(fitlm), col='red')
 ```
+
+---
+## Shiny App
+
+Please link below to access app
+
+https://klevd.shinyapps.io/dataproducts/
+
+
