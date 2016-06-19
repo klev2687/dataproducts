@@ -3,7 +3,7 @@ title       : Developing Data Products
 subtitle    : Predicting Sons Height Using Fathers Height
 author      : Klevin D.
 job         : 
-framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+framework   : html5slides       # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
 widgets     : []            # {mathjax, quiz, bootstrap}
@@ -13,7 +13,15 @@ github:
   user: klev2687
   repo: dataproducts
 ---
+## Developing Data Products
 
+Predicting Sons Height Using Fathers Height
+
+Cousera Data Science
+
+Author: Klevin D.
+
+---
 ## Objective
 
 This presentation details the shiny application developed for assignment 'Developing Data Products' course of Coursera Data Science course.
